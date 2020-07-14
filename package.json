@@ -1,0 +1,50 @@
+{
+  "name": "snowpack-demo",
+  "version": "1.0.0",
+  "description": "snowpack 学习与实践",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "node ./scripts/prettier.js",
+    "lint-staged": "lint-staged",
+    "precommit": "npm run lint-staged",
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged --ignore-path=.prettierignore"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,ts,tsx,json,jsx,less}": [
+      "node ./scripts/prettier.js",
+      "git add ."
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coyeah/snowpack-demo.git"
+  },
+  "keywords": [],
+  "author": "Coyeah_chen@outlook.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Coyeah/snowpack-demo/issues"
+  },
+  "homepage": "https://github.com/Coyeah/snowpack-demo#readme",
+  "devDependencies": {
+    "@snowpack/app-scripts-react": "^1.6.0-alpha.0",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "eslint": "^7.4.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "2.0.5",
+    "pretty-quick": "^2.0.1",
+    "snowpack": "^2.6.4"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "extends": "@snowpack/app-scripts-react/tsconfig.base.json",
+  "compilerOptions": {
+    // 强制进行文件名大小写检查
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "module": "esnext",
+    //决定如何处理模块。或者是"Node"对于Node.js/io.js，或者是"Classic"（默认）
+    "moduleResolution": "node",
+    "target": "esnext",
+    "lib": ["dom", "es2015"],
+    "jsx": "react",
+    "allowJs": true,
+    "strict": true,
+    //允许从没有设置默认导出的模块中默认导入。这并不影响代码的显示，仅为了类型检查。
+    "allowSyntheticDefaultImports": true,
+    "watch": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["web_modules/.types/*"],
+      "@/*": ["./src/*"]
+    },
+    //要包含的类型声明文件名列表；如果指定了types，只有被列出来的包才会被包含进来
+    "types": ["node", "react", "react-dom"]
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*", "types/*.d.ts"]
+}
