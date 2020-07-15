@@ -7,8 +7,10 @@
     "prettier": "node ./scripts/prettier.js",
     "lint-staged": "lint-staged",
     "precommit": "npm run lint-staged",
-    "start": "snowpack dev",
-    "build": "snowpack build"
+    "install": "snowpack install",
+    "dev": "snowpack dev",
+    "build": "snowpack build",
+    "start": "npm run dev"
   },
   "husky": {
     "hooks": {
@@ -34,6 +36,7 @@
   "homepage": "https://github.com/Coyeah/snowpack-demo#readme",
   "devDependencies": {
     "@snowpack/app-scripts-react": "^1.6.0-alpha.0",
+    "@snowpack/plugin-webpack": "^1.6.0-alpha.0",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
     "eslint": "^7.4.0",
@@ -41,7 +44,8 @@
     "lint-staged": "^10.2.11",
     "prettier": "2.0.5",
     "pretty-quick": "^2.0.1",
-    "snowpack": "^2.6.4"
+    "snowpack": "^2.6.4",
+    "webpack-bundle-analyzer": "^3.8.0"
   },
   "dependencies": {
     "react": "^16.13.1",
