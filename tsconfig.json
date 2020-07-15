@@ -1,6 +1,15 @@
 {
+  "include": ["src", "types"],
+  "exclude": ["node_modules"],
   "extends": "@snowpack/app-scripts-react/tsconfig.base.json",
   "compilerOptions": {
+    // You can't currently define paths in your 'extends' config,
+    // so we have to set 'baseUrl' & 'paths' here.
+    // Don't change these unless you know what you're doing.
+    // See: https://github.com/microsoft/TypeScript/issues/25430
+    "baseUrl": "./",
+    "paths": { "*": ["web_modules/.types/*"] },
+    // Feel free to add/edit new config options below:
     // 强制进行文件名大小写检查
     "forceConsistentCasingInFileNames": true,
     "experimentalDecorators": true,
@@ -20,15 +29,6 @@
     "strict": true,
     //允许从没有设置默认导出的模块中默认导入。这并不影响代码的显示，仅为了类型检查。
     "allowSyntheticDefaultImports": true,
-    "watch": true,
-    "baseUrl": ".",
-    "paths": {
-      "*": ["web_modules/.types/*"],
-      "@/*": ["./src/*"]
-    },
-    //要包含的类型声明文件名列表；如果指定了types，只有被列出来的包才会被包含进来
     "types": ["node", "react", "react-dom"]
-  },
-  "exclude": ["node_modules"],
-  "include": ["src/**/*", "types/*.d.ts"]
+  }
 }

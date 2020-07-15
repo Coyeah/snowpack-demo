@@ -1,8 +1,5 @@
 module.exports = {
   extends: '@snowpack/app-scripts-react',
-  scripts: {},
+  srcipts: {},
   plugins: [],
-  devOptions: {
-    build: false,
-  },
 };
