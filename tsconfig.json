@@ -10,6 +10,7 @@
     "baseUrl": "./",
     "paths": {
       "*": ["web_modules/.types/*"],
+      "/web_modules/*": ["node_modules/*", "web_modules/*"],
       // "*": ["*"],
       "src/*": ["src/*"],
       "public/*": ["public/*"]
@@ -25,9 +26,9 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "module": "esnext",
+    "target": "esnext",
     //决定如何处理模块。或者是"Node"对于Node.js/io.js，或者是"Classic"（默认）
     "moduleResolution": "node",
-    "target": "esnext",
     "lib": ["dom", "es2015"],
     "jsx": "react",
     "allowJs": true,

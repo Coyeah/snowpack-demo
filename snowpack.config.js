@@ -4,7 +4,7 @@ module.exports = {
     'mount:public': 'mount public --to /',
     'mount:src': 'mount src --to /_dist_',
     'run:lint': "eslint 'src/**/*.{js,jsx,ts,tsx}'",
-    // "run:lint::watch": "watch \"$1\" src"
+    'run:lint::watch': 'watch "$1" src',
   },
   plugins: [
     '@snowpack/plugin-react-refresh',
@@ -18,9 +18,11 @@ module.exports = {
     ],
   ],
   installOptions: {
-    // sourceMap: true
+    sourceMap: true,
   },
   devOptions: {
+    port: 9000,
+    out: 'build',
     // bundle:false,
     // fallback: "./build/index.html",
   },

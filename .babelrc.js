@@ -1,11 +1,12 @@
 module.exports = {
-  extends: '@snowpack/app-scripts-react/babel.config.json',
+  // extends: '@snowpack/app-scripts-react/babel.config.json',
   presets: [
     ['@babel/preset-env', { useBuiltIns: 'usage', modules: false, corejs: 2 }],
     '@babel/preset-react',
     '@babel/preset-typescript',
   ],
   plugins: [
+    ['@babel/plugin-syntax-import-meta'],
     ['babel-plugin-lodash'],
     ['@babel/plugin-proposal-decorators', { legacy: true }],
     ['@babel/plugin-proposal-class-properties', { loose: true }],
