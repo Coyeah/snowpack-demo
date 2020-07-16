@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
+import React from 'react';
 // import _ from 'lodash-es';
 import logo from './logo.png';
 import './index.css';
 
 export default () => {
-  const [number] = useState(null);
+  // const [number] = useState(null);
 
   return (
     <>
