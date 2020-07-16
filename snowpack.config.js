@@ -5,10 +5,12 @@ module.exports = {
     'mount:src': 'mount src --to /_dist_',
     'run:lint': "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     'run:lint::watch': 'watch "$1" src',
+    'bundle:*': '@snowpack/plugin-react-refresh',
+    'bundle:*': '@snowpack/plugin-webpack',
   },
   plugins: [
     '@snowpack/plugin-react-refresh',
-    '@snowpack/plugin-babel',
+    // '@snowpack/plugin-babel',
     [
       '@snowpack/plugin-webpack',
       {
