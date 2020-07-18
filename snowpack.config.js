@@ -9,8 +9,8 @@ module.exports = {
     'bundle:*': '@snowpack/plugin-webpack',
   },
   plugins: [
+    '@snowpack/plugin-babel',
     '@snowpack/plugin-react-refresh',
-    // '@snowpack/plugin-babel',
     [
       '@snowpack/plugin-webpack',
       {
@@ -24,8 +24,7 @@ module.exports = {
   },
   devOptions: {
     port: 9000,
-    out: 'build',
-    // bundle:false,
+    bundle: false,
     // fallback: "./build/index.html",
   },
   buildOptions: {},
