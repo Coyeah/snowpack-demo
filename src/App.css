@@ -1,0 +1,22 @@
+.layout {
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.desc {
+  color: #888;
+  font-size: 14px;
+}
+
+.layout > img {
+  margin: auto;
+  width: 180px;
+  height: 180px;
+}

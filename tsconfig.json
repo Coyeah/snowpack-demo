@@ -32,6 +32,6 @@
     "allowJs": true,
     "strict": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["node", "react", "react-dom", "lodash-es"]
+    "types": ["node", "react", "react-dom", "lodash"]
   }
 }
