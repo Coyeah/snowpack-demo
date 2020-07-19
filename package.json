@@ -34,7 +34,6 @@
   "bugs": {
     "url": "https://github.com/Coyeah/snowpack-demo/issues"
   },
-  "homepage": "https://github.com/Coyeah/snowpack-demo#readme",
   "devDependencies": {
     "@snowpack/app-scripts-react": "^1.6.0-alpha.0",
     "@snowpack/plugin-webpack": "^1.6.0-alpha.0",

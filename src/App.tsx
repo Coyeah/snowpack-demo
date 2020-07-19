@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+import { isString } from 'lodash';
 import logo from './logo.png';
 import './App.css';
 
@@ -9,7 +9,7 @@ export default () => {
   return (
     <>
       <div className="layout">
-        <div className="title">{_.isString(title) ? title : 'Hello World!'}</div>
+        <div className="title">{isString(title) ? title : 'Hello World!'}</div>
         <div className="desc">snowpack 初尝试，学习和实践；</div>
         <img src={logo} />
       </div>
