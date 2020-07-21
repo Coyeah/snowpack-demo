@@ -12,4 +12,7 @@ module.exports = {
   devOptions: {
     bundle: false,
   },
+  buildOptions: {
+    baseUrl: '/',
+  },
 };
