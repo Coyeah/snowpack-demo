@@ -2,7 +2,21 @@ module.exports = {
   extends: '@snowpack/app-scripts-react/babel.config.json',
   presets: [],
   plugins: [
-    ['@babel/plugin-proposal-decorators', { legacy: true }],
+    [
+      'import',
+      {
+        libraryName: 'antd',
+        style: 'css',
+        libraryDirectory: 'es',
+      },
+      'antd',
+    ],
+    [
+      '@babel/plugin-proposal-decorators',
+      {
+        legacy: true,
+      },
+    ],
     [
       '@babel/plugin-proposal-class-properties',
       {

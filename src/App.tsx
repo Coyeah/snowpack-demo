@@ -1,7 +1,9 @@
 import React from 'react';
+import Card from 'antd/es/card';
+import 'antd/es/card/style/css';
 import { isString } from 'lodash-es';
 import logo from './logo.png';
-import './App.css';
+import styles from './App.module.css';
 
 class Store {
   public title: string = '';
@@ -18,12 +20,10 @@ const store = new Store({
 
 export default () => {
   return (
-    <>
-      <div className="layout">
-        <div className="title">{store.title}</div>
-        <div className="desc">{store.desc}</div>
-        <img src={logo} />
-      </div>
-    </>
+    <Card hoverable style={{ textAlign: 'center', margin: 40 }}>
+      <div className={styles.title}>{store.title}</div>
+      <div className={styles.desc}>{store.desc}</div>
+      <img className={styles.img} src={logo} />
+    </Card>
   );
 };
