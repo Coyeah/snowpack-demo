@@ -4,7 +4,7 @@ module.exports = {
     commonjs: true,
     es6: true,
   },
-  extends: 'eslint:recommended',
+  extends: ['eslint:recommended'],
   globals: {
     $: true,
     process: true,
@@ -74,7 +74,7 @@ module.exports = {
         children: true,
       },
     ], //在JSX属性和表达式中加强或禁止大括号内的空格。
-    'react/jsx-indent-props': [2, 4], //验证JSX中的props缩进
+    'react/jsx-indent-props': [1, 2], //验证JSX中的props缩进
     'react/jsx-key': 2, //在数组或迭代器中验证JSX具有key属性
     'react/jsx-max-props-per-line': [
       1,
