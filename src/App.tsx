@@ -1,29 +1,41 @@
-import React from 'react';
-import Card from 'antd/es/card';
-import 'antd/es/card/style/css';
-import { isString } from 'lodash-es';
-import logo from './logo.png';
-import styles from './App.module.css';
+import React, { useState, useEffect } from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-class Store {
-  public title: string = '';
-  public desc: string = '';
-  constructor({ title, desc }: { title?: string; desc?: string }) {
-    this.title = isString(title) ? title : 'Hello World!';
-    this.desc = isString(desc) ? desc : '';
-  }
+interface AppProps {}
+
+function App({}: AppProps) {
+  // Create the count state.
+  const [count, setCount] = useState(0);
+  // Create the counter (+1 every second).
+  useEffect(() => {
+    const timer = setTimeout(() => setCount(count + 1), 1000);
+    return () => clearTimeout(timer);
+  }, [count, setCount]);
+  // Return the App component.
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <p>
+          Page has been open for <code>{count}</code> seconds.
+        </p>
+        <p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </p>
+      </header>
+    </div>
+  );
 }
 
-const store = new Store({
-  desc: 'snowpack 初尝试，学习和实践；',
-});
-
-export default () => {
-  return (
-    <Card hoverable style={{ textAlign: 'center', margin: 40 }}>
-      <div className={styles.title}>{store.title}</div>
-      <div className={styles.desc}>{store.desc}</div>
-      <img className={styles.img} src={logo} />
-    </Card>
-  );
-};
+export default App;
